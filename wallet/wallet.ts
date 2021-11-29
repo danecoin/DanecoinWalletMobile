@@ -65,7 +65,7 @@ export class Wallet {
 
     async connectToElectrum() {
         try {
-            this.client = new ElectrumClient(50001, "electrum1.bitcoin.org", 'tcp')
+            this.client = new ElectrumClient(50001, "electrum.danecoin.org", 'tcp')
             await this.client.initElectrum({ client: 'Danecoin Wallet', version: '1.4' });
             await this.client.connect()
             this.setUpClient = true
